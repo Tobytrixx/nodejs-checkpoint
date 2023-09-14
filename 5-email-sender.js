@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-// Create a transporter object with your email configuration
+// Create a transporter object with your email config
 const transporter = nodemailer.createTransport({
   service: 'your-email-service',
   auth: {
@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Define the email options
+// Define email options
 const mailOptions = {
   from: 'your-email@example.com',
   to: 'recipient@example.com',
@@ -17,7 +17,7 @@ const mailOptions = {
   text: 'Test email sent from Node.js',
 };
 
-// Send the email
+// Send email
 transporter.sendMail(mailOptions, (error, info) => {
   if (error) {
     console.error(error);
